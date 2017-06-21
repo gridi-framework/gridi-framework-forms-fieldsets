@@ -1,0 +1,35 @@
+//Fieldset
+$fieldset-margin-top: 10px !default;
+$fieldset-margin-bottom: 10px !default;
+$fieldset-margin-left: 0 !default;
+$fieldset-margin-right: 0 !default;
+//Defined margins for each screens.
+$fieldset-margin-for-screens: () !default;
+/*$fieldset-margin-for-screens: (
+    s1: (
+        top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
+        bottom: 20px,
+        left: 20px,
+        right: 20px,
+    ),
+    ...
+) !default;*/
+
+//Legend
+$legend-margin-top: 10px !default;
+$legend-margin-bottom: 10px !default;
+$legend-margin-left: 0 !default;
+$legend-margin-right: 0 !default;
+//Defined margins for each screens.
+$legend-margin-for-screens: () !default;
+/*$legend-margin-for-screens: (
+    s1: (
+        top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
+        bottom: 20px,
+        left: 20px,
+        right: 20px,
+    ),
+    ...
+) !default;*/
+
+$legend-color: $primary-color !default;

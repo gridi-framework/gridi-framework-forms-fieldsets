@@ -1,0 +1,14 @@
+fieldset {
+    display: block;
+    @include include-element-margin($fieldset-margin-top, $fieldset-margin-bottom, $fieldset-margin-left, $fieldset-margin-right, $fieldset-margin-for-screens);
+    border: 0;
+    padding: 0;
+}
+
+legend {
+    display: block;
+    @include include-element-margin($legend-margin-top, $legend-margin-bottom, $legend-margin-left, $legend-margin-right, $legend-margin-for-screens);
+    border: 0;
+    padding: 0;
+    color: $legend-color;
+}
