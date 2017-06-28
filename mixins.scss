@@ -1,0 +1,17 @@
+@mixin include-legend-colors($colors-map) {
+    @if map-has-key($colors-map, color) and map-get($colors-map, color) {
+        color: map-get($colors-map, color);
+    }
+}
+
+@mixin legend-colors($colors-map) {
+    legend {
+        @include include-legend-colors($colors-map);
+    }
+}
+
+@mixin class-legend-colors($class, $colors-map) {
+    legend.#{$class} {
+        @include include-legend-colors($colors-map);
+    }
+}
