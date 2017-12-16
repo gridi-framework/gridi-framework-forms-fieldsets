@@ -9,12 +9,12 @@
 
 @mixin legend-colors($colors-map) {
     legend {
-        @include legend-extra-colors-propertys($colors-map);
+        @include legend-colors-propertys($colors-map);
     }
 }
 
 @mixin class-legend-colors($class, $colors-map) {
     legend.#{$class} {
-        @include legend-extra-colors-propertys($colors-map);
+        @include llegend-colors-propertys($colors-map);
     }
 }
