@@ -1,17 +1,20 @@
-@mixin include-legend-colors($colors-map) {
-    @if map-has-key($colors-map, color) and map-get($colors-map, color) {
-        color: map-get($colors-map, color);
+//@mixin legend-extra-colors-propertys($colors-map) {} //Create this mixin before import module when you want add some special colors style for element
+
+@mixin legend-colors-propertys($colors-map) {
+    @include property-from-map($colors-map, color);
+    @if mixin-exists(legend-extra-colors-propertys) {
+        @include legend-extra-colors-propertys($colors-map);
     }
 }
 
 @mixin legend-colors($colors-map) {
     legend {
-        @include include-legend-colors($colors-map);
+        @include legend-extra-colors-propertys($colors-map);
     }
 }
 
 @mixin class-legend-colors($class, $colors-map) {
     legend.#{$class} {
-        @include include-legend-colors($colors-map);
+        @include legend-extra-colors-propertys($colors-map);
     }
 }

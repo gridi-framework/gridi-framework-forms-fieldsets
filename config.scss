@@ -1,35 +1,63 @@
 //Fieldset
-$fieldset-margin-top: 10px !default;
-$fieldset-margin-bottom: 10px !default;
-$fieldset-margin-left: 0 !default;
-$fieldset-margin-right: 0 !default;
-//Defined margins for each screens.
-$fieldset-margin-for-screens: () !default;
-/*$fieldset-margin-for-screens: (
-    s1: (
-        top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
-        bottom: 20px,
-        left: 20px,
-        right: 20px,
-    ),
-    ...
-) !default;*/
+$fieldset-display: block !default;
+
+//Margins
+$fieldset-margin-top: $form-item-elements-margin-top !default;
+$fieldset-margin-bottom: $form-item-elements-margin-bottom !default;
+$fieldset-margin-left: $form-item-elements-margin-left !default;
+$fieldset-margin-right: $form-item-elements-margin-right !default;
+$fieldset-margin-for-screens: $form-item-elements-margin-for-screens !default;
+
+//Outline
+$fieldset-outline-width: 0 !default;
+$fieldset-outline-style: null !default;
+$fieldset-outline-color: null !default;
+
+//Borders
+$fieldset-border-width: 0 !default;
+$fieldset-border-style: null !default;
+$fieldset-border-color: null !default;
+$fieldset-borders: () !default;
+
+//Paddings
+$fieldset-padding-top: 0 !default;
+$fieldset-padding-bottom: 0 !default;
+$fieldset-padding-left: 0 !default;
+$fieldset-padding-right: 0 !default;
+
+//Extra style
+//@mixin fieldset-extra-style() {} //Create this mixin before import module when you want add some special style for element
 
 //Legend
+$legend-display: block !default;
+$legend-width: 100% !default;
+
+//Margins
 $legend-margin-top: 0 !default;
 $legend-margin-bottom: 0 !default;
 $legend-margin-left: 0 !default;
 $legend-margin-right: 0 !default;
-//Defined margins for each screens.
 $legend-margin-for-screens: () !default;
-/*$legend-margin-for-screens: (
-    s1: (
-        top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
-        bottom: 20px,
-        left: 20px,
-        right: 20px,
-    ),
-    ...
-) !default;*/
 
+//Outline
+$legend-outline-width: 0 !default;
+$legend-outline-style: null !default;
+$legend-outline-color: null !default;
+
+//Borders
+$legend-border-width: 0 !default;
+$legend-border-style: null !default;
+$legend-border-color: null !default;
+$legend-borders: () !default;
+
+//Paddings
+$legend-padding-top: 0 !default;
+$legend-padding-bottom: 0 !default;
+$legend-padding-left: 0 !default;
+$legend-padding-right: 0 !default;
+
+//Color
 $legend-color: $primary-color !default;
+
+//Extra style
+//@mixin legend-extra-style() {} //Create this mixin before import module when you want add some special style for element

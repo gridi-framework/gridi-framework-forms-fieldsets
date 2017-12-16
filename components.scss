@@ -1,14 +1,67 @@
 fieldset {
-    display: block;
-    @include include-element-margin($fieldset-margin-top, $fieldset-margin-bottom, $fieldset-margin-left, $fieldset-margin-right, $fieldset-margin-for-screens);
-    border: 0;
-    padding: 0;
+    display: $fieldset-display;
+    @include margin-shorthand-with-screens-support((
+        top: $fieldset-margin-top,
+        bottom: $fieldset-margin-bottom,
+        left: $fieldset-margin-left,
+        right: $fieldset-margin-right
+    ), $fieldset-margin-for-screens);
+    @include outline-shorthand((
+        width: $fieldset-outline-width,
+        style: $fieldset-outline-style,
+        color: $fieldset-outline-color,
+        make-shorthand: true
+    ));
+    @include border-shorthand(map-merge((
+        border: (
+            width: $fieldset-border-width,
+            style: $fieldset-border-style,
+            color: $fieldset-border-color,
+            make-shorthand: true
+        )
+    ), $fieldset-borders));
+    @include padding-shorthand((
+        top: $fieldset-padding-top,
+        bottom: $fieldset-padding-bottom,
+        left: $fieldset-padding-left,
+        right: $fieldset-padding-right
+    ));
+    @if mixin-exists(fieldset-extra-style) {
+        @include fieldset-extra-style();
+    }
 }
 
 legend {
-    display: block;
-    @include include-element-margin($legend-margin-top, $legend-margin-bottom, $legend-margin-left, $legend-margin-right, $legend-margin-for-screens);
-    border: 0;
-    padding: 0;
-    color: $legend-color;
+    display: $legend-display;
+    @include not-required-property(width, $legend-width);
+    @include margin-shorthand-with-screens-support((
+        top: $legend-margin-top,
+        bottom: $legend-margin-bottom,
+        left: $legend-margin-left,
+        right: $legend-margin-right
+    ), $legend-margin-for-screens);
+    @include outline-shorthand((
+        width: $legend-outline-width,
+        style: $legend-outline-style,
+        color: $legend-outline-color,
+        make-shorthand: true
+    ));
+    @include border-shorthand(map-merge((
+        border: (
+            width: $legend-border-width,
+            style: $legend-border-style,
+            color: $legend-border-color,
+            make-shorthand: true
+        )
+    ), $legend-borders));
+    @include padding-shorthand((
+        top: $legend-padding-top,
+        bottom: $legend-padding-bottom,
+        left: $legend-padding-left,
+        right: $legend-padding-right
+    ));
+    @include not-required-property(color, $legend-color);
+    @if mixin-exists(legend-extra-style) {
+        @include legend-extra-style();
+    }
 }
